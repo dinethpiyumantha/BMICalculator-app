@@ -7,40 +7,51 @@
     android:rotationX="0"
     tools:context=".MainActivity">
 
+
     <View
-        android:id="@+id/view1"
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/dark"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:background="@drawable/light_bottom_view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="136dp"
-        android:text="BMI Calculator"
-        android:textColor="@color/orange"
-        android:textSize="40dp"
+        android:id="@+id/displayBmi"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="84dp"
+        android:gravity="end"
+        android:text="BMI"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/green"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="350dp"
-        android:layout_height="400dp"
-        android:background="@drawable/rouded_corner"
-        android:layout_marginTop="216dp"
-        app:layout_constraintEnd_toEndOf="@+id/view1"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/displayBmi"
+        app:layout_constraintEnd_toEndOf="@+id/displayBmi"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="@+id/displayBmi"
+        app:layout_constraintTop_toTopOf="@+id/displayBmi"
+        app:layout_constraintVertical_bias="0.45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
