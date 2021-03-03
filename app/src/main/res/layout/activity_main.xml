@@ -38,7 +38,7 @@
         android:alpha=".50"
         android:src="@drawable/indoor_bike"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view3" />
 
@@ -48,13 +48,28 @@
         android:layout_height="60dp"
         android:layout_marginTop="84dp"
         android:gravity="end"
-        android:text="BMI"
+        android:text="kg/m"
         android:textAlignment="viewEnd"
         android:textColor="@color/green"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/displayBmi2"
+        android:layout_width="10dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="84dp"
+        android:gravity="end"
+        android:text="2"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/green"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/displayBmi"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -109,6 +124,7 @@
         android:layout_marginTop="144dp"
         android:background="@drawable/primary_button_cus"
         android:text="Calculate"
+        android:onClick="calculateBmi"
         app:backgroundTint="@color/green"
         app:layout_constraintBottom_toTopOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="parent"
